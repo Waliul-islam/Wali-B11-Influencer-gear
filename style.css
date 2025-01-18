@@ -105,6 +105,73 @@ ul, .nav-links{
     left: 4rem;
     width: 75%;
 }
+.brand-container{
+    max-width: 70rem;
+    margin: 2rem auto;
+    border-top: 1px solid #f5f2f2;
+    border-bottom: 1px solid #f5f2f2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+/* collection styles */
+.collection{
+    max-width: 66rem;
+    margin: 5rem auto;
+}
+.collection-title{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--font-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.card-title{
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #18191F;
+    margin-top: 0.5rem;
+}
+.card-price{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.87)
+}
+.card-desc{
+    font-size: 0.85rem;
+    font-weight: 700;
+    color:#787885;
+}
+.card{
+    background-color: #FFFFFF;
+    border: 1px solid #f5f2f2;
+    padding: 1.2rem;
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+    width: 19rem;
+}
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.88rem;
+}
+
+.see-more{
+    color: var(--btn-color);
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.6rem;
+    margin: 2rem;
+    width: calc(100% + 2rem); 
+    right: 0; 
+    margin-left: auto; 
+}
 
 
 
@@ -115,8 +182,29 @@ ul, .nav-links{
 
 
 /* Responsiveness Quotes */
+@media screen and (max-width:576px){
+    .brand-container{
+        gap: 3rem;
+    }
+    .cards-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.88rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .card{
+        justify-self: center;
+    }
+    .see-more{
+        width: calc(100% - 1rem); 
+    }
+    }
+
+
 @media screen and (max-width:768px){
     
+       
 }
 
 
@@ -144,5 +232,13 @@ ul, .nav-links{
     }
     .banner-title, .banner-desc{
         text-align: center;
+    }   
+}
+
+@media screen and (min-width:577px) and (max-width:992px) {
+    .cards-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.88rem;
     }
 }
