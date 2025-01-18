@@ -173,6 +173,101 @@ ul, .nav-links{
     margin-left: auto; 
 }
 
+/* product styles */
+.product{
+    max-width: 70rem;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.product-description{
+    display: flex;
+    flex-direction: column;
+}
+.product-title{
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #0A0826;
+    margin-bottom: 1rem;
+}
+.product-desc{
+    font-size: 1rem;
+    font-weight: 700;
+    color: #6C6C6C;
+    line-height: 1.75rem;
+    max-width: 31.25rem;
+    margin-bottom: 1rem;
+}
+.product-btn{
+    color: white;
+    background-color: var(--btn-color);
+    border: none;
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 10rem;
+}
+.product-btn>span,img{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+}
+/* footer styles */
+
+footer{
+    max-width: 1440px;
+    margin: 3rem auto 0;
+    background-color: #0A0826; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 3rem ;
+}
+.footer-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+footer p{
+    font-family: 0.5rem;
+    font-weight: 500;
+    color: #D9DBE1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -215,7 +310,7 @@ ul, .nav-links{
     .nav-links>ul{
         display: none;
     }
-    .banner{
+    .banner, .product{
         flex-direction: column;
         gap: 1.5rem;
     }
@@ -230,9 +325,23 @@ ul, .nav-links{
         align-items: center;
         align-self: center;
     }
-    .banner-title, .banner-desc{
+    .banner-title, .banner-desc, .product-title, .product-desc{
         text-align: center;
-    }   
+    } 
+    .product-description{
+        order: 1;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+    }
+    .product-img{
+        order: 2;
+        width: 90%;
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+    }
+    
 }
 
 @media screen and (min-width:577px) and (max-width:992px) {
